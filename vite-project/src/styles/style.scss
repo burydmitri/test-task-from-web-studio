@@ -1,25 +1,3 @@
-.button {
-    width: 100%;
-    display: block;
-
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    background-color: #999999;
-    border-radius: 10px;
-    border: none;
-    transition: .1s;
-    cursor: pointer;
-
-    padding: 12.5px 0;
-
-    &:hover {
-        background-color: #bdbdbd;
-    }
-    &:active {
-        background-color: #d8d8d8;
-    }
-}
 .header {
     width: 100%;
     height: 90px;
@@ -169,8 +147,6 @@
 
 
 .hero {
-    height: calc(100vh - 90px);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,8 +155,16 @@
 
     padding: 120px 200px;
 
+    @media screen and (max-width: 1440px) {
+        padding: 75px 150px;
+    }
+
     &__info {
         max-width: 745px;
+
+        @media screen and (max-width: 1440px) {
+            max-width: 555px;
+        }
     }
 
     &__title {
@@ -189,13 +173,23 @@
         line-height: 64.8px;
 
         margin-bottom: 30px;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 40px;
+            line-height: 48px;
+
+            margin-bottom: 20px;
+        }
     }
 
     &__subtitle {
         font-size: 18px;
         line-height: 27.9px;
 
-        margin-bottom: 30px;
+        @media screen and (max-width: 1440px) {
+            font-size: 16px;
+            line-height: 25px;
+        }
     }
 
     &__form {
@@ -214,25 +208,40 @@
     padding: 35px 40px 40px 40px;
 
     &__title {
-        font-style: 32px;
+        font-size: 32px;
         line-height: 41.6px;
         margin-bottom: 10px;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 24px;
+            line-height: 31px;
+        }
     }
 
     &__subtitle {
-        font-style: 16px;
+        font-size: 16px;
         line-height: 25px;
         margin-bottom: 25px;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 15px;
+            line-height: 23.25px;
+        }
     }
 
     &__input-wrapper {
-        font-style: 16px;
+        font-size: 16px;
         line-height: 25px;
 
         display: flex;
         flex-direction: column;
 
         font-weight: 600;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 15px;
+            line-height: 23.25px;
+        }
     }
 
     input[type=text] {
@@ -240,23 +249,32 @@
         display: block;
 
         color: #999;
-        // font-weight: 400;
         border: 1px solid #E5E5E5;
         border-radius: 10px;
         background-color: #F8F9FB;
 
         margin: 5px 0 20px;
         padding: 0 10px;
+
+        @media screen and (max-width: 1440px) {
+            height: 44px;
+        }
     }
 
     &__check-wrapper {
         display: flex;
         flex-direction: row;
+        align-items: center;
 
-        font-style: 14px;
+        font-size: 14px;
         line-height: 22px;
 
         margin-bottom: 35px;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 12px;
+            line-height: 18.6px;
+        }
     }
 
     input[type=checkbox] {
@@ -291,6 +309,37 @@
     }
 }
 
+.button {
+    width: 100%;
+    display: block;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #999999;
+    border-radius: 10px;
+    border: none;
+    transition: .1s;
+    cursor: pointer;
+
+    padding: 12.5px 0;
+
+    @media screen and (max-width: 1440px) {
+        font-size: 15px;
+        line-height: 23.25px;
+
+        padding: 10.5px 0;
+    }
+
+    &:hover {
+        background-color: #bdbdbd;
+    }
+
+    &:active {
+        background-color: #d8d8d8;
+    }
+}
+
 .tariffs {
     width: 100%;
 
@@ -301,15 +350,28 @@
 
     padding: 120px 200px;
 
+    @media screen and (max-width: 1440px) {
+        padding: 100px 150px;
+    }
+
     &__header {
         width: 100%;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 1440px) {
+            margin-bottom: 44px;
+        }
     }
 
     &__title {
         font-size: 42px;
         line-height: 50.4px;
         font-weight: 600;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 31px;
+            line-height: 37.2px;
+        }
     }
 
     &__cards {
@@ -332,6 +394,10 @@
 
         background: #F0F0F0 url(../img/hero-img.svg) no-repeat center;
         background-size: 70% 70%;
+
+        @media screen and (max-width: 1440px) {
+            height: 184px;
+        }
     }
 
     &__flags {
@@ -365,24 +431,39 @@
 
     &__label {
         position: absolute;
-        bottom: 25px;
         left: 30px;
+        bottom: 25px;
         z-index: 2;
 
         font-size: 22px;
         line-height: 29px;
         font-weight: 600;
-    }
 
+        @media screen and (max-width: 1440px) {
+            left: 20px;
+            bottom: 15px;
+
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
 
     &__info {
         width: 100%;
         padding: 25px 30px 30px 30px;
+
+        @media screen and (max-width: 1440px) {
+            padding: 15px 20px 20px;
+        }
     }
 
     &__list {
         width: 100%;
         margin-bottom: 25px;
+
+        @media screen and (max-width: 1440px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__item {
@@ -399,6 +480,14 @@
 
         margin-top: 15px;
 
+        @media screen and (max-width: 1440px) {
+            font-size: 15px;
+            line-height: 23.25px;
+
+            margin-top: 8px;
+            padding-bottom: 11px;
+        }
+
         &:first-child {
             margin: 0;
         }
@@ -411,6 +500,7 @@
         span:last-child {
             font-weight: 600;
         }
+
     }
 
     &__pay {
@@ -419,14 +509,26 @@
         justify-content: space-between;
         align-items: center;
     }
+
     &__prices {
         display: flex;
         flex-direction: column
     }
+
     &__price {
         font-weight: 600;
         font-size: 22px;
         line-height: 28.6px;
+
+        @media screen and (max-width: 1715px) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            font-size: 20px;
+            line-height: 26px;
+        }
 
         &--crossed {
             font-size: 16px;
@@ -434,11 +536,43 @@
             text-decoration: line-through;
 
             margin-top: 5px;
+
+            @media screen and (max-width: 1715px) {
+                font-size: 15px;
+                line-height: 15px;
+
+                margin-top: 3px;
+            }
+
+            @media screen and (max-width: 1440px) {
+                font-size: 15px;
+                line-height: 15px;
+
+                margin-top: 3px;
+            }
         }
     }
 
     &__button {
         width: auto;
         padding: 12.5px 30px;
+
+        @media screen and (max-width: 1715px) {
+            padding: 10.5px 20px;
+        }
+
+        @media screen and (max-width: 1595px) {
+            font-size: 15px;
+            line-height: 23.25px;
+            padding: 10.5px 10px;
+        }
+
+        @media screen and (max-width: 1460px) {
+            padding: 10.5px 5px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            padding: 10.5px 20px;
+        }
     }
 }
