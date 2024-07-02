@@ -1,0 +1,139 @@
+.header {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: 600;
+    font-style: 16px;
+    line-height: 24.8px;
+
+    @media screen and (max-width: 1440px)  {
+        height: 70px;
+        font-size: 15px;
+        line-height: 23.25px;
+    }
+    @media screen and (max-width: 768px)  {
+        font-size: 14px;
+        line-height: 21.7px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        padding: 0 35px;
+        @media screen and (max-width: 1440px)  {
+            padding: 0 25px;
+        }
+        @media screen and (max-width: 768px)  {
+            padding: 0 20px;
+        }
+    }
+    &__logo-img {
+        @media screen and (max-width: 1440px)  {
+            width: 155px;
+            height: 40px;
+        }
+    }
+
+    &__nav {
+        border-left: 1px solid #E5E5E5;
+    }
+
+    &__contacts {
+        display: flex;
+    }
+}
+
+.nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1440px)  {
+        height: 70px;
+    }
+    @media screen and (max-width: 768px)  {
+        display: none
+    }
+
+    &__list {
+        display: flex;
+
+        list-style-type: none;
+
+        padding: 0 0 0 5px;
+    }
+
+    &__item {
+        margin-left: 30px;
+        @media screen and (max-width: 1440px)  {
+            margin-left: 20px;
+        }
+    }
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+
+    &__town, &__phone-link {
+        position: relative;
+
+        padding-left: 34px;
+        padding-right: 35px;
+
+        @media screen and (max-width: 1440px)  {
+            padding-left: 30px;
+            padding-right: 25px;
+        }
+
+        &::before {
+            content: '';
+
+            display: block;
+            width: 24px;
+            height: 24px;
+
+            
+            background-image: url(../img/location.svg);
+            background-size: cover;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media screen and (max-width: 1440px)  {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    &__phone {
+        height: 90px;
+        padding-left: 35px;
+
+        display: flex;
+        align-items: center;
+
+        border-left: 1px solid #E5E5E5;
+
+        @media screen and (max-width: 1440px)  {
+            height: 70px;
+            padding-left: 25px;
+        }
+    }
+    &__phone-link {
+        color: inherit;
+        text-decoration: none;
+
+        &::before {
+            background-image: url(../img/phone.svg);
+        }
+    }
+}

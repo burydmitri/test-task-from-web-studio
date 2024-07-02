@@ -1,16 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <p>dddddd</p>
-    <div id="app">
-      <p>sssss</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <a class="header__logo" href="/">
+        <img class="header__logo-img" src="./src/img/logo.svg" alt="logo">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">Услуги</li>
+          <li class="nav__item">Продукция</li>
+          <li class="nav__item">Проекты</li>
+          <li class="nav__item">Компания</li>
+        </ul>
+      </nav>
     </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <div class="contacts header__contacts">
+      <div class="contacts__town">Санкт-Петербург</div>
+      <div class="contacts__phone">
+        <a class="contacts__phone-link" href="tel:+78009413428">+7 (800) 941-34-28</a>
+      </div>
+    </div>
+  </header>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
