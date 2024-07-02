@@ -23,10 +23,15 @@
         </ul>
       </nav>
     </div>
-    <div class="contacts header__contacts">
-      <div class="contacts__town">Санкт-Петербург</div>
-      <div class="contacts__phone">
-        <a class="contacts__phone-link" href="tel:+78009413428">+7 (800) 941-34-28</a>
+    <div class="header__wrapper">
+      <div class="contacts header__contacts">
+        <div class="contacts__town">Санкт-Петербург</div>
+        <div class="contacts__phone">
+          <a class="contacts__phone-link" href="tel:+78009413428">+7 (800) 941-34-28</a>
+        </div>
+      </div>
+      <div class="header__burger">
+        ///
       </div>
     </div>
   </header>
@@ -42,19 +47,23 @@
         <form action="">
           <h2 class="form__title">Оставить заявку</h2>
           <p class="form__subtitle">Заполните форму и мы свяжемся с вами, чтобы узнать детали вашего проекта.</p>
-          <div class="form__input-wrapper">
-            <label for="name">Имя*</label>
-            <input id="name" type="text">
+          <div class="form__wrap">
+            <div class="form__input-wrapper">
+              <label for="name">Имя*</label>
+              <input id="name" type="text">
+            </div>
+            <div class="form__input-wrapper">
+              <label for="phone">Телефон*</label>
+              <input id="phone" type="text">
+            </div>
           </div>
-          <div class="form__input-wrapper">
-            <label for="phone">Телефон*</label>
-            <input id="phone" type="text">
+          <div class="form__wrap">
+            <div class="form__check-wrapper">
+              <input id="agree" type="checkbox">
+              <label for="agree">Я принимаю <a href="/">условия передачи информации</a></label>
+            </div>
+            <button class="button form__button">Связаться с нами</button>
           </div>
-          <div class="form__check-wrapper">
-            <input id="agree" type="checkbox">
-            <label for="agree">Я принимаю <a href="/">условия передачи информации</a></label>
-          </div>
-          <button class="button form__button">Связаться с нами</button>
         </form>
       </div>
     </div>

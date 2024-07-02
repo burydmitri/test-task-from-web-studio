@@ -16,7 +16,7 @@
         line-height: 23.25px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
         font-size: 14px;
         line-height: 21.7px;
     }
@@ -33,7 +33,7 @@
             padding: 0 25px;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) {
             padding: 0 20px;
         }
     }
@@ -52,6 +52,15 @@
     &__contacts {
         display: flex;
     }
+
+    &__burger {
+        display: none;
+        padding: 25px;
+
+        @media screen and (max-width: 1000px) {
+            display: block;
+        }
+    }
 }
 
 .nav {
@@ -63,7 +72,7 @@
         height: 70px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
         display: none
     }
 
@@ -120,6 +129,12 @@
         }
     }
 
+    &__town {
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
     &__phone {
         height: 90px;
         padding-left: 35px;
@@ -132,6 +147,11 @@
         @media screen and (max-width: 1440px) {
             height: 70px;
             padding-left: 25px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            border-left: none;
+            border-right: 1px solid #E5E5E5;
         }
     }
 
@@ -159,11 +179,21 @@
         padding: 75px 150px;
     }
 
+    @media screen and (max-width: 1000px) {
+        padding: 50px 30px;
+        flex-direction: column;
+    }
+
     &__info {
         max-width: 745px;
 
         @media screen and (max-width: 1440px) {
             max-width: 555px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            max-width: none;
+            width: 100%;
         }
     }
 
@@ -180,6 +210,11 @@
 
             margin-bottom: 20px;
         }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 36px;
+            line-height: 43.2px;
+        }
     }
 
     &__subtitle {
@@ -194,7 +229,13 @@
 
     &__form {
         margin-left: 20px;
+
+        @media screen and (max-width: 1000px) {
+            margin-left: 0;
+            margin-top: 47px;
+        }
     }
+
 }
 
 .form {
@@ -207,6 +248,15 @@
 
     padding: 35px 40px 40px 40px;
 
+    @media screen and (max-width: 1440px) {
+        padding: 25px 30px 30px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        max-width: none;
+        width: 100%;
+    }
+
     &__title {
         font-size: 32px;
         line-height: 41.6px;
@@ -216,6 +266,11 @@
             font-size: 24px;
             line-height: 31px;
         }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 20px;
+            line-height: 26px;
+        }
     }
 
     &__subtitle {
@@ -224,8 +279,22 @@
         margin-bottom: 25px;
 
         @media screen and (max-width: 1440px) {
-            font-size: 15px;
-            line-height: 23.25px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__wrap {
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
@@ -241,6 +310,13 @@
         @media screen and (max-width: 1440px) {
             font-size: 15px;
             line-height: 23.25px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 14px;
+            line-height: 22px;
+
+            width: calc(50% - 7px);
         }
     }
 
@@ -274,6 +350,12 @@
         @media screen and (max-width: 1440px) {
             font-size: 12px;
             line-height: 18.6px;
+
+            margin-bottom: 25px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            margin-bottom: 0;
         }
     }
 
@@ -331,6 +413,12 @@
         padding: 10.5px 0;
     }
 
+    @media screen and (max-width: 1000px) {
+        width: auto;
+
+        padding: 11px 25px;
+    }
+
     &:hover {
         background-color: #bdbdbd;
     }
@@ -354,12 +442,20 @@
         padding: 100px 150px;
     }
 
+    @media screen and (max-width: 1330px) {
+        padding: 75px 30px;
+    }
+
     &__header {
         width: 100%;
         margin-bottom: 50px;
 
         @media screen and (max-width: 1440px) {
             margin-bottom: 44px;
+        }
+
+        @media screen and (max-width: 1330px) {
+            margin-bottom: 30px;
         }
     }
 
@@ -372,6 +468,11 @@
             font-size: 31px;
             line-height: 37.2px;
         }
+
+        @media screen and (max-width: 1330px) {
+            font-size: 28px;
+            line-height: 33.6px;
+        }
     }
 
     &__cards {
@@ -379,6 +480,11 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+
+        @media screen and (max-width: 1330px) {
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -446,6 +552,11 @@
             font-size: 20px;
             line-height: 26px;
         }
+
+        @media screen and (max-width: 1330px) {
+            font-size: 18px;
+            line-height: 23.4px;
+        }
     }
 
     &__info {
@@ -486,6 +597,11 @@
 
             margin-top: 8px;
             padding-bottom: 11px;
+        }
+
+        @media screen and (max-width: 1330px) {
+            font-size: 14px;
+            line-height: 22px;
         }
 
         &:first-child {
@@ -530,6 +646,11 @@
             line-height: 26px;
         }
 
+        @media screen and (max-width: 1330px) {
+            font-size: 18px;
+            line-height: 23.25px;
+        }
+
         &--crossed {
             font-size: 16px;
             line-height: 16px;
@@ -544,11 +665,9 @@
                 margin-top: 3px;
             }
 
-            @media screen and (max-width: 1440px) {
-                font-size: 15px;
-                line-height: 15px;
-
-                margin-top: 3px;
+            @media screen and (max-width: 1330px) {
+                font-size: 14px;
+                line-height: 14px;
             }
         }
     }
@@ -573,6 +692,10 @@
 
         @media screen and (max-width: 1440px) {
             padding: 10.5px 20px;
+        }
+
+        @media screen and (max-width: 1330px) {
+            padding: 11px 25px;
         }
     }
 }
