@@ -1,6 +1,35 @@
 @import './base.scss';
 @import './mmenu.scss';
 
+
+.town,
+.phone {
+    position: relative;
+
+    text-decoration: none;
+
+    &::before {
+        content: '';
+
+        display: block;
+        width: 24px;
+        height: 24px;
+
+        background-image: url(../img/location.svg);
+        background-size: cover;
+
+        position: absolute;
+
+        @media screen and (max-width: 1440px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.phone::before {
+    background-image: url(../img/phone.svg);
+}
+
 .nav {
     height: 90px;
     display: flex;
@@ -57,12 +86,19 @@
         position: relative;
     }
 
+    @media screen and (max-width: 480px) {
+        height: 50px;
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
     }
 
     &__logo {
+        display: flex;
+
+        align-items: center;
         padding: 0 35px;
 
         @media screen and (max-width: 1440px) {
@@ -72,6 +108,10 @@
         @media screen and (max-width: 1000px) {
             padding: 0 20px;
         }
+
+        @media screen and (max-width: 480px) {
+            padding: 0 15px;
+        }
     }
 
     &__logo-img {
@@ -79,6 +119,10 @@
             width: 155px;
             height: 40px;
         }
+        @media screen and (max-width: 480px) {
+            width: 116px;
+            height: 30px;
+        }   
     }
 
     &__nav {
@@ -107,14 +151,14 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+
     &__town,
     &__phone-link {
-        position: relative;
-
         padding-left: 34px;
         padding-right: 35px;
-
-        text-decoration: none;
 
         @media screen and (max-width: 1440px) {
             padding-left: 30px;
@@ -122,24 +166,8 @@
         }
 
         &::before {
-            content: '';
-
-            display: block;
-            width: 24px;
-            height: 24px;
-
-
-            background-image: url(../img/location.svg);
-            background-size: cover;
-
-            position: absolute;
             top: 0;
             left: 0;
-
-            @media screen and (max-width: 1440px) {
-                width: 20px;
-                height: 20px;
-            }
         }
     }
 
@@ -171,10 +199,6 @@
 
     &__phone-link {
         color: inherit;
-
-        &::before {
-            background-image: url(../img/phone.svg);
-        }
     }
 }
 
@@ -197,7 +221,16 @@
         flex-direction: column;
     }
 
+    @media screen and (max-width: 480px) {
+        padding: 30px 15px;
+        flex-direction: column;
+
+        background: #F0F0F0
+    }
+
+
     &__info {
+        padding: 0 5px;
         max-width: 745px;
 
         @media screen and (max-width: 1440px) {
@@ -228,6 +261,13 @@
             font-size: 36px;
             line-height: 43.2px;
         }
+
+        @media screen and (max-width: 480px) {
+            font-size: 26px;
+            line-height: 31.2px;
+
+            margin-bottom: 10px;
+        }
     }
 
     &__subtitle {
@@ -238,6 +278,10 @@
             font-size: 16px;
             line-height: 25px;
         }
+        @media screen and (max-width: 480px) {
+            font-size: 14px;
+            line-height: 21.7px;
+        }
     }
 
     &__form {
@@ -246,6 +290,10 @@
         @media screen and (max-width: 1000px) {
             margin-left: 0;
             margin-top: 47px;
+        }
+
+        @media screen and (max-width: 480px) {
+            margin-top: 34px;
         }
     }
 
@@ -270,6 +318,10 @@
         width: 100%;
     }
 
+    @media screen and (max-width: 480px) {
+        padding: 20px;
+    }
+
     &__title {
         font-size: 32px;
         line-height: 41.6px;
@@ -283,6 +335,8 @@
         @media screen and (max-width: 1000px) {
             font-size: 20px;
             line-height: 26px;
+
+            margin-bottom: 8px;
         }
     }
 
@@ -300,6 +354,13 @@
             font-size: 20px;
             line-height: 26px;
         }
+
+        @media screen and (max-width: 480px) {
+            font-size: 14px;
+            line-height: 22px;
+
+            margin-bottom: 15px;
+        }
     }
 
     &__wrap {
@@ -308,6 +369,10 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+        }
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
         }
     }
 
@@ -331,6 +396,13 @@
 
             width: calc(50% - 7px);
         }
+
+        @media screen and (max-width: 480px) {
+            font-size: 14px;
+            line-height: 22px;
+
+            width: 100%;
+        }
     }
 
     input[type=text] {
@@ -347,6 +419,10 @@
 
         @media screen and (max-width: 1440px) {
             height: 44px;
+        }
+
+        @media screen and (max-width: 480px) {
+            margin: 5px 0 13px;
         }
     }
 
@@ -369,6 +445,11 @@
 
         @media screen and (max-width: 1000px) {
             margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 20px;
+            width: 100%;
         }
     }
 
@@ -432,6 +513,11 @@
         padding: 11px 25px;
     }
 
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        padding: 11px 0;
+    }
+
     &:hover {
         background-color: #bdbdbd;
     }
@@ -459,6 +545,10 @@
         padding: 75px 30px;
     }
 
+    @media screen and (max-width: 480px) {
+        padding: 60px 20px;
+    }
+
     &__header {
         width: 100%;
         margin-bottom: 50px;
@@ -469,6 +559,10 @@
 
         @media screen and (max-width: 1330px) {
             margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 590px) {
+            margin-bottom: 25px;
         }
     }
 
@@ -486,6 +580,11 @@
             font-size: 28px;
             line-height: 33.6px;
         }
+
+        @media screen and (max-width: 480px) {
+            font-size: 22px;
+            line-height: 26.4px;
+        }
     }
 
     &__cards {
@@ -497,6 +596,10 @@
         @media screen and (max-width: 1330px) {
             gap: 20px;
             grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 590px) {
+            gap: 15px;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
@@ -579,6 +682,9 @@
         @media screen and (max-width: 1440px) {
             padding: 15px 20px 20px;
         }
+        @media screen and (max-width: 480px) {
+            padding: 15px;
+        }
     }
 
     &__list {
@@ -587,6 +693,9 @@
 
         @media screen and (max-width: 1440px) {
             margin-bottom: 20px;
+        }
+        @media screen and (max-width: 480px) {
+            margin-bottom: 15px;
         }
     }
 
