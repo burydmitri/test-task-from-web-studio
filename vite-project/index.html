@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css">
 </head>
 
 <body>
@@ -25,18 +26,16 @@
     </div>
     <div class="header__wrapper">
       <div class="contacts header__contacts">
-        <div class="contacts__town">Санкт-Петербург</div>
+        <a href="#" class="contacts__town">Санкт-Петербург</a>
         <div class="contacts__phone">
           <a class="contacts__phone-link" href="tel:+78009413428">+7 (800) 941-34-28</a>
         </div>
       </div>
-      <div class="header__burger">
-        ///
-      </div>
+      <mm-burger ease="elastic" menu="mmenu" fx="squeeze"></mm-burger>
+
     </div>
   </header>
-
-  <main class="main">
+  <div id="app" class="main">
     <div class="hero main__hero">
       <div class="hero__info">
         <h1 class="hero__title">Patriot — это ключ к успешному бизнесу по всей территории РФ</h1>
@@ -223,8 +222,58 @@
       </div>
 
     </div>
-  </main>
-  <script type="module" src="/main.js"></script>
+    </main>
+
+    <nav id="mmenu">
+      <ul class="mmenu__list">
+        <li class="mmenu__item"><span>Услуги</span>
+          <ul>
+            <li><a href="#">Управление активами и инвестиции</a></li>
+            <li><a href="#">Автоматизация бизнеса</a></li>
+            <li><a href="#">Финансовый аудит</a></li>
+            <li><a href="#">Юридическая практика</a></li>
+            <li><a href="#">Лизинг</a></li>
+            <li><a href="#">Информационная безопасность</a></li>
+          </ul>
+        </li>
+        <li class="mmenu__item">
+          <span>Продукция</span>
+          <ul>
+            <li><a href="#">Управление активами и инвестиции</a></li>
+            <li><a href="#">Автоматизация бизнеса</a></li>
+            <li><a href="#">Финансовый аудит</a></li>
+            <li><a href="#">Юридическая практика</a></li>
+            <li><a href="#">Лизинг</a></li>
+            <li><a href="#">Информационная безопасность</a></li>
+          </ul>
+        </li>
+        <li class="mmenu__item"><span>Проекты</span>
+          <ul>
+            <li><a href="#">Управление активами и инвестиции</a></li>
+            <li><a href="#">Автоматизация бизнеса</a></li>
+            <li><a href="#">Финансовый аудит</a></li>
+            <li><a href="#">Юридическая практика</a></li>
+            <li><a href="#">Лизинг</a></li>
+            <li><a href="#">Информационная безопасность</a></li>
+          </ul>
+        </li>
+        <li class="mmenu__item"><span>Компания</span>
+          <ul>
+            <li><a href="#">Управление активами и инвестиции</a></li>
+            <li><a href="#">Автоматизация бизнеса</a></li>
+            <li><a href="#">Финансовый аудит</a></li>
+            <li><a href="#">Юридическая практика</a></li>
+            <li><a href="#">Лизинг</a></li>
+            <li><a href="#">Информационная безопасность</a></li>
+          </ul>
+        </li>
+        <li class="mmenu__item mmenu__town"><a href="#">Санкт-Петербург</a></li>
+      </ul>
+      <!-- <div class="contacts__town block">Санкт-Петербург</div> -->
+    </nav>
+
+
+    <script type="module" src="/main.js"></script>
 </body>
 
 </html>
