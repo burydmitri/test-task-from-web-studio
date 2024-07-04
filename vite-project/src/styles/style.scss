@@ -207,9 +207,7 @@
 
 
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 
     background: #F0F0F0 url(../img/hero-img.svg) no-repeat center;
 
@@ -220,17 +218,25 @@
     }
 
     @media screen and (max-width: 1000px) {
-        padding: 50px 30px;
+        padding: 50px 30px 86px;
         flex-direction: column;
     }
 
     @media screen and (max-width: 480px) {
-        padding: 30px 15px;
-        flex-direction: column;
+        padding: 30px 15px 80px;
 
         background: #F0F0F0
     }
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
 
     &__info {
         padding: 0 5px;
@@ -243,6 +249,13 @@
         @media screen and (max-width: 1000px) {
             max-width: none;
             width: 100%;
+        }
+
+        &--slide {
+            max-width: none;
+            width: 100%;
+
+            text-align: center;
         }
     }
 
@@ -298,6 +311,36 @@
 
         @media screen and (max-width: 480px) {
             margin-top: 34px;
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        z-index: 10;
+
+        bottom: 120px;
+        left: 200px;
+
+        @media screen and (max-width: 1440px) {
+            bottom: 75px;
+            left: 150px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        z-index: 10;
+
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+
+        @media screen and (max-width: 1000px) {
+            display: block;
         }
     }
 
@@ -595,6 +638,20 @@
         @media screen and (max-width: 480px) {
             font-size: 22px;
             line-height: 26.4px;
+        }
+    }
+
+    &__buttons {
+        @media screen and (max-width: 1330px) {
+            display: none;
+        }
+    }
+
+    &__dots {
+        padding-top: 30px;
+
+        @media screen and (max-width: 1330px) {
+            display: block;
         }
     }
 }

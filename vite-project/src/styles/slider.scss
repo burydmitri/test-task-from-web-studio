@@ -1,9 +1,5 @@
 .owl-nav {
     display: flex;
-
-    @media screen and (max-width: 1330px) {
-        display: none;
-    }
 }
 
 .owl-prev,
@@ -45,12 +41,6 @@
 
 .owl-dots {
     display: none;
-
-    padding-top: 30px;
-
-    @media screen and (max-width: 1330px) {
-        display: block;
-    }
 
     .owl-dot { 
         border: none;

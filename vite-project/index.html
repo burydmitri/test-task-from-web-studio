@@ -39,34 +39,56 @@
   </header>
   <div id="app" class="main">
     <div class="hero main__hero">
-      <div class="hero__info">
-        <h1 class="hero__title">Patriot — это ключ к успешному бизнесу по всей территории РФ</h1>
-        <p class="hero__subtitle">Роскошный, быстрый, практичный автомобиль на выгодных условиях лизинга. Станьте ближе
-          к мечте и сократите налог на имущество в три раза.</p>
-      </div>
-      <div class="form hero__form">
-        <form enctype="multipart/form-data" method="post" id="form" onsubmit="submitForm(event)" action="send.php">
-          <h2 class="form__title">Оставить заявку</h2>
-          <p class="form__subtitle">Заполните форму и мы свяжемся с вами, чтобы узнать детали вашего проекта.</p>
-          <div class="form__wrap">
-            <div class="form__input-wrapper">
-              <label for="name">Имя*</label>
-              <input id="name" name="name" type="text">
-            </div>
-            <div class="form__input-wrapper">
-              <label for="phone">Телефон*</label>
-              <input id="phone" name="phone" type="text">
-            </div>
+      <div class="hero__carousel owl-carousel owl-theme">
+        <div class="hero__wrapper">
+          <div class="hero__info">
+            <h1 class="hero__title">Patriot — это ключ к успешному бизнесу по всей территории РФ</h1>
+            <p class="hero__subtitle">Роскошный, быстрый, практичный автомобиль на выгодных условиях лизинга. Станьте
+              ближе
+              к мечте и сократите налог на имущество в три раза.</p>
           </div>
-          <div class="form__wrap">
-            <div class="form__check-wrapper">
-              <input id="agree" name="agree" type="checkbox">
-              <label for="agree">Я принимаю <a href="/">условия передачи информации</a></label>
-            </div>
-            <button type="submit" class="button form__button">Связаться с нами</button>
+          <div class="form hero__form">
+            <form enctype="multipart/form-data" method="post" id="form" onsubmit="submitForm(event)" action="send.php">
+              <h2 class="form__title">Оставить заявку</h2>
+              <p class="form__subtitle">Заполните форму и мы свяжемся с вами, чтобы узнать детали вашего проекта.</p>
+              <div class="form__wrap">
+                <div class="form__input-wrapper">
+                  <label for="name">Имя*</label>
+                  <input id="name" name="name" type="text">
+                </div>
+                <div class="form__input-wrapper">
+                  <label for="phone">Телефон*</label>
+                  <input id="phone" name="phone" type="text">
+                </div>
+              </div>
+              <div class="form__wrap">
+                <div class="form__check-wrapper">
+                  <input id="agree" name="agree" type="checkbox">
+                  <label for="agree">Я принимаю <a href="/">условия передачи информации</a></label>
+                </div>
+                <button type="submit" class="button form__button">Связаться с нами</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
+        <div class="hero__info hero__info--slide">
+          <h1 class="hero__title">Patriot — это ключ к успешному бизнесу по всей территории РФ</h1>
+          <p class="hero__subtitle">Как принято считать, предприниматели в сети интернет, превозмогая сложившуюся
+            непростую экономическую ситуацию, описаны максимально подробно! Значимость этих проблем настолько очевидна,
+            что перспективное планирование способствует повышению качества поэтапного и последовательного развития
+            общества. Наше дело не так однозначно, как может показаться: существующая теория предопределяет высокую
+            востребованность инновационных методов управления процессами. Вот вам яркий пример современных тенденций —
+            новая модель организационной деятельности напрямую зависит от как самодостаточных, так и внешне зависимых
+            концептуальных решений.</p>
+        </div>
+        <div class="hero__info hero__info--slide">
+          <h1 class="hero__title">С другой стороны, укрепление и развитие внутренней структуры предполагает независимые
+            способы реализации поставленных обществом задач. Внезапно, элементы политического процесса набирают
+            популярность среди определенных слоев населения, а значит, должны быть описаны максимально подробно.</h1>
+        </div>
       </div>
+      <div class="hero__buttons owl-nav"></div>
+      <div class="hero__dots owl-dots"></div>
     </div>
     <div class="tariffs main__tariffs">
       <div class="tariffs__header">
@@ -75,7 +97,7 @@
         </h2>
         <div class="tariffs__buttons owl-nav"></div>
       </div>
-      <div class="tariffs__cards owl-carousel owl-theme">
+      <div class="tariffs__cards tariffs__carousel owl-carousel owl-theme">
         <div class="card tariffs__card">
           <div class="card__img">
             <div class="card__flags">

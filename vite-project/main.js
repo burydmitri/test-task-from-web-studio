@@ -22,8 +22,24 @@ document.addEventListener(
     }
 );
 
+
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
+    $(".hero__carousel").owlCarousel({
+        loop: true,
+        nav:true,
+        margin: 10,
+        navContainer: ".hero__buttons",
+        dotsContainer: ".hero__dots",
+        responsive:{
+            0:{
+                items:1,
+            }
+        }
+    });
+});
+
+$(document).ready(function () {
+    $(".tariffs__carousel").owlCarousel({
         nav:true,
         navContainer: ".tariffs__buttons",
         dotsContainer: ".tariffs__dots",
