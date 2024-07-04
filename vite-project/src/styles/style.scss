@@ -1,5 +1,6 @@
 @import './base.scss';
 @import './mmenu.scss';
+@import './slider.scss';
 
 
 .town,
@@ -26,6 +27,7 @@
         }
     }
 }
+
 .phone::before {
     background-image: url(../img/phone.svg);
 }
@@ -119,10 +121,11 @@
             width: 155px;
             height: 40px;
         }
+
         @media screen and (max-width: 480px) {
             width: 116px;
             height: 30px;
-        }   
+        }
     }
 
     &__nav {
@@ -278,6 +281,7 @@
             font-size: 16px;
             line-height: 25px;
         }
+
         @media screen and (max-width: 480px) {
             font-size: 14px;
             line-height: 21.7px;
@@ -491,6 +495,7 @@
 
     color: #fff;
     font-size: 16px;
+    line-height: 24.8px;
     font-weight: 600;
     background-color: #999999;
     border-radius: 10px;
@@ -542,15 +547,19 @@
     }
 
     @media screen and (max-width: 1330px) {
-        padding: 75px 30px;
+        padding: 75px 0;
     }
 
     @media screen and (max-width: 480px) {
-        padding: 60px 20px;
+        padding: 60px 0;
     }
 
     &__header {
         width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
         margin-bottom: 50px;
 
         @media screen and (max-width: 1440px) {
@@ -558,11 +567,13 @@
         }
 
         @media screen and (max-width: 1330px) {
+            padding: 0 30px;
             margin-bottom: 30px;
         }
 
         @media screen and (max-width: 590px) {
             margin-bottom: 25px;
+            padding: 0 20px;
         }
     }
 
@@ -584,22 +595,6 @@
         @media screen and (max-width: 480px) {
             font-size: 22px;
             line-height: 26.4px;
-        }
-    }
-
-    &__cards {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
-
-        @media screen and (max-width: 1330px) {
-            gap: 20px;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media screen and (max-width: 590px) {
-            gap: 15px;
-            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
@@ -682,6 +677,7 @@
         @media screen and (max-width: 1440px) {
             padding: 15px 20px 20px;
         }
+
         @media screen and (max-width: 480px) {
             padding: 15px;
         }
@@ -694,6 +690,7 @@
         @media screen and (max-width: 1440px) {
             margin-bottom: 20px;
         }
+
         @media screen and (max-width: 480px) {
             margin-bottom: 15px;
         }
@@ -799,21 +796,21 @@
         padding: 12.5px 30px;
 
         @media screen and (max-width: 1715px) {
-            padding: 10.5px 20px;
+            padding: 11px 20px;
         }
 
         @media screen and (max-width: 1595px) {
             font-size: 15px;
             line-height: 23.25px;
-            padding: 10.5px 10px;
+            padding: 11px 10px;
         }
 
         @media screen and (max-width: 1460px) {
-            padding: 10.5px 5px;
+            padding: 11px 5px;
         }
 
         @media screen and (max-width: 1440px) {
-            padding: 10.5px 20px;
+            padding: 11px 20px;
         }
 
         @media screen and (max-width: 1330px) {
@@ -821,6 +818,7 @@
         }
     }
 }
+
 .block {
     display: block;
 }

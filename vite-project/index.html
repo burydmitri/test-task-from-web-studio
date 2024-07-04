@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css">
+  <link rel="stylesheet" href="./src/owlCarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="./src/owlCarousel/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -43,25 +45,25 @@
           к мечте и сократите налог на имущество в три раза.</p>
       </div>
       <div class="form hero__form">
-        <form action="">
+        <form enctype="multipart/form-data" method="post" id="form" onsubmit="submitForm(event)" action="send.php">
           <h2 class="form__title">Оставить заявку</h2>
           <p class="form__subtitle">Заполните форму и мы свяжемся с вами, чтобы узнать детали вашего проекта.</p>
           <div class="form__wrap">
             <div class="form__input-wrapper">
               <label for="name">Имя*</label>
-              <input id="name" type="text">
+              <input id="name" name="name" type="text">
             </div>
             <div class="form__input-wrapper">
               <label for="phone">Телефон*</label>
-              <input id="phone" type="text">
+              <input id="phone" name="phone" type="text">
             </div>
           </div>
           <div class="form__wrap">
             <div class="form__check-wrapper">
-              <input id="agree" type="checkbox">
+              <input id="agree" name="agree" type="checkbox">
               <label for="agree">Я принимаю <a href="/">условия передачи информации</a></label>
             </div>
-            <button class="button form__button">Связаться с нами</button>
+            <button type="submit" class="button form__button">Связаться с нами</button>
           </div>
         </form>
       </div>
@@ -71,8 +73,9 @@
         <h2 class="tariffs__title">
           Тарифы
         </h2>
+        <div class="tariffs__buttons owl-nav"></div>
       </div>
-      <div class="tariffs__cards">
+      <div class="tariffs__cards owl-carousel owl-theme">
         <div class="card tariffs__card">
           <div class="card__img">
             <div class="card__flags">
@@ -187,6 +190,44 @@
           <div class="card__img">
             <div class="card__flags">
               <span class="card__flag">Акция</span>
+              <span class="card__flag">Хит</span>
+            </div>
+            <div class="card__label">
+              Лайт
+            </div>
+          </div>
+          <div class="card__info">
+            <ul class="card__list">
+              <li class="card__item">
+                <span>Visa, Master Card, МИР</span>
+                <span>3,7%</span>
+              </li>
+              <li class="card__item">
+                <span>Apple Pay, Android Pay</span>
+                <span>3,7%</span>
+              </li>
+              <li class="card__item">
+                <span>Электронные кошельки</span>
+                <span>3,7%</span>
+              </li>
+              <li class="card__item">
+                <span>Оборот</span>
+                <span>от 0 до 200 т.р.</span>
+              </li>
+            </ul>
+            <div class="card__pay">
+              <div class="card__prices">
+                <span class="card__price">120 000 ₽</span>
+                <span class="card__price card__price--crossed">120 000 ₽</span>
+              </div>
+              <button class="button card__button">Оплатить</button>
+            </div>
+          </div>
+        </div>
+        <div class="card tariffs__card">
+          <div class="card__img">
+            <div class="card__flags">
+              <span class="card__flag">Акция</span>
               <span class="card__flag">новинка</span>
               <span class="card__flag">Хит</span>
             </div>
@@ -220,7 +261,7 @@
           </div>
         </div>
       </div>
-
+      <div class="tariffs__dots owl-dots"></div>
     </div>
     </main>
 
@@ -268,7 +309,7 @@
           </ul>
         </li>
         <li class="mmenu__item"><a href="#">Пресс-центр</a></li>
-          <li class="mmenu__item"><a href="#">Контакты</a></li>
+        <li class="mmenu__item"><a href="#">Контакты</a></li>
         <li class="town mmenu__item mmenu__town last-items">
           <a class="" href="#">Санкт-Петербург</a>
         </li>
@@ -280,6 +321,8 @@
     </nav>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./src/owlCarousel/owl.carousel.min.js"></script>
     <script type="module" src="/main.js"></script>
 </body>
 
