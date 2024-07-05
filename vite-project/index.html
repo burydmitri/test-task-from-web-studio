@@ -54,16 +54,16 @@
               <div class="form__wrap">
                 <div class="form__input-wrapper">
                   <label for="name">Имя*</label>
-                  <input id="name" name="name" type="text">
+                  <input id="name" name="name" type="text" required>
                 </div>
                 <div class="form__input-wrapper">
                   <label for="phone">Телефон*</label>
-                  <input id="phone" name="phone" type="text">
+                  <input id="phone" name="phone" type="text" required>
                 </div>
               </div>
               <div class="form__wrap">
                 <div class="form__check-wrapper">
-                  <input id="agree" name="agree" type="checkbox">
+                  <input id="agree" name="agree" type="checkbox" required>
                   <label for="agree">Я принимаю <a href="/">условия передачи информации</a></label>
                 </div>
                 <button type="submit" class="button form__button">Связаться с нами</button>
@@ -343,8 +343,41 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./src/owlCarousel/owl.carousel.min.js"></script>
+    <script src="./owlCarousel/owl.carousel.min.js"></script>
     <script type="module" src="/main.js"></script>
+    <script>
+      async function submitForm(event) {
+        event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+
+        console.log('submitForm')
+        try {
+          // Формируем запрос
+          const response = await fetch(event.target.action, {
+            method: 'POST',
+            body: new FormData(event.target)
+          });
+          // проверяем, что ответ есть
+          if (!response.ok) throw (`Ошибка при обращении к серверу: ${response.status}`);
+          // проверяем, что ответ действительно JSON
+          const contentType = response.headers.get('content-type');
+          if (!contentType || !contentType.includes('application/json')) {
+            throw ('Ошибка обработки. Ответ не JSON');
+          }
+          // обрабатываем запрос
+          const json = await response.json();
+          if (json.result === "success") {
+            // в случае успеха
+            alert(json.info);
+          } else {
+            // в случае ошибки
+            console.log(json);
+            throw (json.info);
+          }
+        } catch (error) { // обработка ошибки
+          alert(error);
+        }
+      }
+    </script>
 </body>
 
 </html>
